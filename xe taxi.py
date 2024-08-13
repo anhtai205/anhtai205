@@ -4,16 +4,23 @@ Created on Tue Aug 13 18:47:22 2024
 
 @author: anh tai
 """
-km = float(input("nhap do dai quang duong da di (km):"))
-tien = 3 * 13000 + 5 * 12000 + (km - 8) * 10000 
-if km > 1:
-    print(" tra 20k cho 1 km")
-elif km == 3:
-    print("so tien phai tra = ", km * 13000)
-elif  4 <= km  <= 8:
-    print("so tien phai tra =", km * 13000 + ((km - 3) * 12000 ))
-elif km > 8:
-    print("so tien phai tra", (km * 13000 + ((km - 3) * 12000 ) + ((km - 8) * 10000)))
-if tien > 100 :
-    print(" so tien phai tra sau cung = ", tien - ( tien * 0.08) )    
- 
+km = float(input("Số km quãng đường đi được:"))
+if km <= 3:
+    if km > 1:
+        x = km * 13
+        print(f" số tiền phải trả là {x}K")
+    else:
+        print(" sóo tiền phải trả là ")
+else:
+    if km <= 8:
+        x = 39 + (km - 3) * 12
+        print(f" só tiền phải trả là {x}")
+    else:
+        x = 39 + 5 * 12 + (km - 8) * 10
+        if x > 100:
+            a = x * 0.92
+            print(f" số tiền phải trả là {a}K")
+        else:
+            a = x
+            print(f" số tiền phải trả là {a}")
+            
